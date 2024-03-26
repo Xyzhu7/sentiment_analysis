@@ -30,12 +30,11 @@ class SA_LSTM(nn.Module):
         return out
 
 
-# if __name__ == "__main__":
-#    from configs import Config
-#    max_len_seq = 129
-#    cfg = Config()
-#    model_textcls = SA_LSTM(config=cfg)
-#    input_tensor = torch.tensor([i for i in range(320)]).reshape([10, 32])
-#    out_tensor = model_textcls.forward(input_tensor)
-#    print(out_tensor.size())
-#    print(out_tensor)
+if __name__ == "__main__":
+    from configs import Config
+    cfg = Config()
+    model_textcls = SA_LSTM(config=cfg)
+    input_tensor = torch.tensor([i for i in range(320)]).reshape([10, 32])
+    out_tensor = model_textcls.forward(input_tensor)
+    print(out_tensor.size())
+    print(out_tensor)
